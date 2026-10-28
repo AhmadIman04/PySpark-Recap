@@ -1,0 +1,143 @@
+df.show()
+                                                                                
++----------+----------+-----------+----------+-----------+------------+-------------+-------------+
+| OrderDate| StockDate|OrderNumber|ProductKey|CustomerKey|TerritoryKey|OrderLineItem|OrderQuantity|
++----------+----------+-----------+----------+-----------+------------+-------------+-------------+
+|2020-01-01|2019-09-21|    SO45080|       332|      14657|           1|            1|            1|
+|2020-01-01|2019-12-05|    SO45079|       312|      29255|           4|            1|            1|
+|2020-01-01|2019-10-29|    SO45082|       350|      11455|           9|            1|            1|
+|2020-01-01|2019-11-16|    SO45081|       338|      26782|           6|            1|            1|
+|2020-01-02|2019-12-15|    SO45083|       312|      14947|          10|            1|            1|
+|2020-01-02|2019-10-12|    SO45084|       310|      29143|           4|            1|            1|
+|2020-01-02|2019-12-18|    SO45086|       314|      18747|           9|            1|            1|
+|2020-01-02|2019-10-09|    SO45085|       312|      18746|           9|            1|            1|
+|2020-01-03|2019-10-03|    SO45093|       312|      18906|           9|            1|            1|
+|2020-01-03|2019-09-29|    SO45090|       310|      29170|           4|            1|            1|
+|2020-01-03|2019-12-11|    SO45088|       345|      11398|          10|            1|            1|
+|2020-01-03|2019-10-24|    SO45092|       313|      18899|           9|            1|            1|
+|2020-01-03|2019-12-16|    SO45089|       351|      25977|           4|            1|            1|
+|2020-01-03|2019-10-26|    SO45091|       314|      18909|           9|            1|            1|
+|2020-01-03|2019-09-11|    SO45087|       350|      11388|          10|            1|            1|
+|2020-01-03|2019-09-11|    SO45094|       310|      22785|           6|            1|            1|
+|2020-01-04|2019-10-30|    SO45096|       312|      12483|           7|            1|            1|
+|2020-01-04|2019-10-30|    SO45097|       313|      29151|           4|            1|            1|
+|2020-01-04|2019-09-15|    SO45098|       310|      29167|           1|            1|            1|
+|2020-01-04|2019-12-07|    SO45095|       344|      11394|          10|            1|            1|
++----------+----------+-----------+----------+-----------+------------+-------------+-------------+
+only showing top 20 rows
+
+
+
+df_cust.show()
++-----------+------+---------+--------+----------+-------------+------+--------------------+------------+-------------+---------------+--------------+---------+
+|CustomerKey|Prefix|FirstName|LastName| BirthDate|MaritalStatus|Gender|        EmailAddress|AnnualIncome|TotalChildren| EducationLevel|    Occupation|HomeOwner|
++-----------+------+---------+--------+----------+-------------+------+--------------------+------------+-------------+---------------+--------------+---------+
+|      11000|   MR.|      JON|    YANG|1966-04-08|            M|     M|jon24@adventure-w...|       90000|            2|      Bachelors|  Professional|        Y|
+|      11001|   MR.|   EUGENE|   HUANG|1965-05-14|            S|     M|eugene10@adventur...|       60000|            3|      Bachelors|  Professional|        N|
+|      11002|   MR.|    RUBEN|  TORRES|1965-08-12|            M|     M|ruben35@adventure...|       60000|            3|      Bachelors|  Professional|        Y|
+|      11003|   MS.|  CHRISTY|     ZHU|1968-02-15|            S|     F|christy12@adventu...|       70000|            0|      Bachelors|  Professional|        N|
+|      11004|  MRS.|ELIZABETH| JOHNSON|1968-08-08|            S|     F|elizabeth5@advent...|       80000|            5|      Bachelors|  Professional|        Y|
+|      11005|   MR.|    JULIO|    RUIZ|1965-08-05|            S|     M|julio1@adventure-...|       70000|            0|      Bachelors|  Professional|        Y|
+|      11007|   MR.|    MARCO|   MEHTA|1964-05-09|            M|     M|marco14@adventure...|       60000|            3|      Bachelors|  Professional|        Y|
+|      11008|  MRS.|    ROBIN| VERHOFF|1964-07-07|            S|     F|rob4@adventure-wo...|       60000|            4|      Bachelors|  Professional|        Y|
+|      11009|   MR.|  SHANNON| CARLSON|1964-04-01|            S|     M|shannon38@adventu...|       70000|            0|      Bachelors|  Professional|        N|
+|      11010|   MS.|JACQUELYN|  SUAREZ|1964-02-06|            S|     F|jacquelyn20@adven...|       70000|            0|      Bachelors|  Professional|        N|
+|      11011|   MR.|   CURTIS|      LU|1963-11-04|            M|     M|curtis9@adventure...|       60000|            4|      Bachelors|  Professional|        Y|
+|      11012|  MRS.|   LAUREN|  WALKER|1968-01-18|            M|     F|lauren41@adventur...|      100000|            2|      Bachelors|    Management|        Y|
+|      11013|   MR.|      IAN| JENKINS|1968-08-06|            M|     M|ian47@adventure-w...|      100000|            2|      Bachelors|    Management|        Y|
+|      11014|  MRS.|   SYDNEY| BENNETT|1968-05-09|            S|     F|sydney23@adventur...|      100000|            3|      Bachelors|    Management|        N|
+|      11015|   MS.|    CHLOE|   YOUNG|1979-02-27|            S|     F|chloe23@adventure...|       30000|            0|Partial College|Skilled Manual|        N|
+|      11016|   MR.|    WYATT|    HILL|1979-04-28|            M|     M|wyatt32@adventure...|       30000|            0|Partial College|Skilled Manual|        Y|
+|      11017|  MRS.|  SHANNON|    WANG|1944-06-26|            S|     F|shannon1@adventur...|       20000|            4|    High School|Skilled Manual|        Y|
+|      11018|   MR.| CLARENCE|     RAI|1944-10-09|            S|     M|clarence32@advent...|       30000|            2|Partial College|      Clerical|        Y|
+|      11019|   MR.|     LUKE|     LAL|1978-03-07|            S|     M|luke18@adventure-...|       40000|            0|    High School|Skilled Manual|        N|
+|      11020|   MR.|   JORDAN|    KING|1978-09-20|            S|     M|jordan73@adventur...|       40000|            0|    High School|Skilled Manual|        N|
++-----------+------+---------+--------+----------+-------------+------+--------------------+------------+-------------+---------------+--------------+---------+
+only showing top 20 rows
+
+
+df_territory.show()
+
++-----------------+--------------+--------------+-------------+
+|SalesTerritoryKey|        Region|       Country|    Continent|
++-----------------+--------------+--------------+-------------+
+|                1|     Northwest| United States|North America|
+|                2|     Northeast| United States|North America|
+|                3|       Central| United States|North America|
+|                4|     Southwest| United States|North America|
+|                5|     Southeast| United States|North America|
+|                6|        Canada|        Canada|North America|
+|                7|        France|        France|       Europe|
+|                8|       Germany|       Germany|       Europe|
+|                9|     Australia|     Australia|      Pacific|
+|               10|United Kingdom|United Kingdom|       Europe|
++-----------------+--------------+--------------+-------------+
+
+
+df_product.show()
++----------+---------------------+----------+--------------------+--------------------+--------------------+------------+-----------+------------+-----------+------------+
+|ProductKey|ProductSubcategoryKey|ProductSKU|         ProductName|           ModelName|  ProductDescription|ProductColor|ProductSize|ProductStyle|ProductCost|ProductPrice|
++----------+---------------------+----------+--------------------+--------------------+--------------------+------------+-----------+------------+-----------+------------+
+|       214|                   31| HL-U509-R|Sport-100 Helmet,...|           Sport-100|Universal fit, we...|         Red|          0|           0|    13.0863|       34.99|
+|       215|                   31|   HL-U509|Sport-100 Helmet,...|           Sport-100|Universal fit, we...|       Black|          0|           0|    12.0278|     33.6442|
+|       218|                   23| SO-B909-M|Mountain Bike Soc...| Mountain Bike Socks|Combination of na...|       White|          M|           U|     3.3963|         9.5|
+|       219|                   23| SO-B909-L|Mountain Bike Soc...| Mountain Bike Socks|Combination of na...|       White|          L|           U|     3.3963|         9.5|
+|       220|                   31| HL-U509-B|Sport-100 Helmet,...|           Sport-100|Universal fit, we...|        Blue|          0|           0|    12.0278|     33.6442|
+|       223|                   19|   CA-1098|        AWC Logo Cap|         Cycling Cap|Traditional style...|       Multi|          0|           U|     5.7052|      8.6442|
+|       226|                   21| LJ-0192-S|Long-Sleeve Logo ...|Long-Sleeve Logo ...|Unisex long-sleev...|       Multi|          S|           U|    31.7244|     48.0673|
+|       229|                   21| LJ-0192-M|Long-Sleeve Logo ...|Long-Sleeve Logo ...|Unisex long-sleev...|       Multi|          M|           U|    31.7244|     48.0673|
+|       232|                   21| LJ-0192-L|Long-Sleeve Logo ...|Long-Sleeve Logo ...|Unisex long-sleev...|       Multi|          L|           U|    31.7244|     48.0673|
+|       235|                   21| LJ-0192-X|Long-Sleeve Logo ...|Long-Sleeve Logo ...|Unisex long-sleev...|       Multi|         XL|           U|    31.7244|     48.0673|
+|       238|                   14|FR-R92R-62|HL Road Frame - R...|       HL Road Frame|Our lightest and ...|         Red|         62|           U|   747.9682|   1263.4598|
+|       241|                   14|FR-R92R-44|HL Road Frame - R...|       HL Road Frame|Our lightest and ...|         Red|         44|           U|   747.9682|   1263.4598|
+|       244|                   14|FR-R92R-48|HL Road Frame - R...|       HL Road Frame|Our lightest and ...|         Red|         48|           U|   747.9682|   1263.4598|
+|       247|                   14|FR-R92R-52|HL Road Frame - R...|       HL Road Frame|Our lightest and ...|         Red|         52|           U|   747.9682|   1263.4598|
+|       250|                   14|FR-R92R-56|HL Road Frame - R...|       HL Road Frame|Our lightest and ...|         Red|         56|           U|   747.9682|   1263.4598|
+|       253|                   14|FR-R38B-58|LL Road Frame - B...|       LL Road Frame|The LL Frame prov...|       Black|         58|           U|   176.1997|    297.6346|
+|       256|                   14|FR-R38B-60|LL Road Frame - B...|       LL Road Frame|The LL Frame prov...|       Black|         60|           U|   176.1997|    297.6346|
+|       259|                   14|FR-R38B-62|LL Road Frame - B...|       LL Road Frame|The LL Frame prov...|       Black|         62|           U|   176.1997|    297.6346|
+|       262|                   14|FR-R38R-44|LL Road Frame - R...|       LL Road Frame|The LL Frame prov...|         Red|         44|           U|   181.4857|    306.5636|
+|       264|                   14|FR-R38R-48|LL Road Frame - R...|       LL Road Frame|The LL Frame prov...|         Red|         48|           U|   181.4857|    306.5636|
++----------+---------------------+----------+--------------------+--------------------+--------------------+------------+-----------+------------+-----------+------------+
+only showing top 20 rows
+
+
+df_product_subcat.show()
++---------------------+---------------+------------------+
+|ProductSubcategoryKey|SubcategoryName|ProductCategoryKey|
++---------------------+---------------+------------------+
+|                    1| Mountain Bikes|                 1|
+|                    2|     Road Bikes|                 1|
+|                    3|  Touring Bikes|                 1|
+|                    4|     Handlebars|                 2|
+|                    5|Bottom Brackets|                 2|
+|                    6|         Brakes|                 2|
+|                    7|         Chains|                 2|
+|                    8|      Cranksets|                 2|
+|                    9|    Derailleurs|                 2|
+|                   10|          Forks|                 2|
+|                   11|       Headsets|                 2|
+|                   12|Mountain Frames|                 2|
+|                   13|         Pedals|                 2|
+|                   14|    Road Frames|                 2|
+|                   15|        Saddles|                 2|
+|                   16| Touring Frames|                 2|
+|                   17|         Wheels|                 2|
+|                   18|     Bib-Shorts|                 3|
+|                   19|           Caps|                 3|
+|                   20|         Gloves|                 3|
++---------------------+---------------+------------------+
+only showing top 20 rows
+
+
+
+df_product_cat.show()
+
++------------------+------------+
+|ProductCategoryKey|CategoryName|
++------------------+------------+
+|                 1|       Bikes|
+|                 2|  Components|
+|                 3|    Clothing|
+|                 4| Accessories|
++------------------+------------+
